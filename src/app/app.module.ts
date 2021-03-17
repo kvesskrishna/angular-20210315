@@ -4,8 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { TableComponent } from './table/table.component';
+import { ProductsComponent } from './products/products.component';
+import { DiscountPipe } from './pipes/discount.pipe';
+import { UsersComponent } from './users/users.component';
+import { SearchPipe } from './pipes/search.pipe';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TableComponent, ProductsComponent, DiscountPipe, UsersComponent, SearchPipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

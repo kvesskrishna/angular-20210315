@@ -1,0 +1,17 @@
+<h2 class="text-center text-primary">My Products</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12 float-right">
+            {{today | date: 'yyyy/MM/dd'}}
+            <!-- {{myproducts | json}} -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3" *ngFor="let product of myproducts">
+            <img style="width:250px" [src]="product.img" alt="">
+            <h3>{{product.id}} - {{product.title}}</h3>
+            <p>Actual Price: {{product.price | currency:'INR'}}</p>
+            <p>Discount price: {{product.price | discount:20:12 | currency:'INR'}}</p>
+        </div>
+    </div>
+</div>

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  showTable: boolean = true;
   constructor() {
     const nums = [1, 2, 3, 4, 5];
     const evens = nums.filter((n) => n % 2 == 0);
@@ -17,6 +18,9 @@ export class AppComponent {
     console.log(doubles);
   }
 
+  toggleTable() {
+    this.showTable = !this.showTable;
+  }
   title = 'my first component';
   count = 0;
   name = 'Tom';

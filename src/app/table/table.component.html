@@ -1,0 +1,14 @@
+<h1>Table Component</h1>
+
+<div>
+    <input type="text" [(ngModel)]="num" placeholder="enter number" (keyup)="generateTable()"><br>
+    <input type="text" [(ngModel)]="range" placeholder="enter range" (keyup)="generateTable()"><br>
+</div>
+<div *ngIf="num&&range">
+    <h4>Result</h4>
+    <!-- {{result}} -->
+    <div [innerHTML]="result"></div>
+    <p *ngFor="let res of result;let i=index;">{{num}} X {{i+1}} = {{res}}</p>
+</div>
+
+<button (click)="updateNum()">click</button>
