@@ -3,3 +3,4 @@
 <p>Actual Price: {{product.price | currency:'INR'}}</p>
 <p>Discount price: {{product.price | discount:20:12 | currency:'INR'}}</p>
 <button (click)="doTest(product.title)">Do test</button>
+<a href='' class="btn btn-success" [routerLink]="['/detail', product.id, product.title]">Explore</a>

@@ -1,0 +1,24 @@
+<form [formGroup]='postForm' (ngSubmit)="submit()" action="">
+    <div>
+        <input type="text" formControlName="title">
+        <div class="text-danger" *ngIf="f['title'].errors">
+            <div *ngIf="f['title'].errors.required">Title is required</div>
+            <div *ngIf="f['title'].errors.minlength">Title should be minimum 4 characters</div>
+        </div>
+    </div>
+    <div>
+        <input type="text" formControlName="body">
+        <div class="text-danger" *ngIf="f['body'].errors">
+            <div *ngIf="f['body'].errors.required">Body is required</div>
+            <div *ngIf="f['body'].errors.minlength">Body should be minimum 10 characters</div>
+        </div>
+    </div>
+    <div>
+        <input type="text" formControlName="userId">
+        <div class="text-danger" *ngIf="f['userId'].errors">
+            <div *ngIf="f['userId'].errors.required">User id is required</div>
+        </div>
+    </div>
+    <button type="submit" [disabled]="!postForm.valid">submit</button>
+
+</form>

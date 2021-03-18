@@ -1,0 +1,6 @@
+<div>
+    <p>ID: {{product.id}}</p>
+    <p>Title: {{product.title}}</p>
+    <p>Actual Price: {{product.price| currency:'INR'}}</p>
+    <p>Discunt Price: {{product.price | discount:20:12 | currency: 'INR'}}</p>
+</div>
