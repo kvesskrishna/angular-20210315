@@ -1,0 +1,5 @@
+<img style="width:250px" [src]="product.img" alt="">
+<h3>{{product.id}} - {{product.title}}</h3>
+<p>Actual Price: {{product.price | currency:'INR'}}</p>
+<p>Discount price: {{product.price | discount:20:12 | currency:'INR'}}</p>
+<button (click)="doTest(product.title)">Do test</button>

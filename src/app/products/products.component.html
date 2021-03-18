@@ -8,10 +8,7 @@
     </div>
     <div class="row">
         <div class="col-3" *ngFor="let product of myproducts">
-            <img style="width:250px" [src]="product.img" alt="">
-            <h3>{{product.id}} - {{product.title}}</h3>
-            <p>Actual Price: {{product.price | currency:'INR'}}</p>
-            <p>Discount price: {{product.price | discount:20:12 | currency:'INR'}}</p>
+            <app-product (test)='printTest($event)' [product]='product'></app-product>
         </div>
     </div>
 </div>

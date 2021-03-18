@@ -13,4 +13,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.myproducts);
   }
+  printTest(e) {
+    console.log(e);
+  }
 }
